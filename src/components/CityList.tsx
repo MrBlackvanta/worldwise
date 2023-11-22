@@ -1,11 +1,11 @@
-import { type City } from "../App";
+import { type CityType } from "../App";
 import CityItem from "./CityItem";
 import styles from "./CityList.module.scss";
 import Message from "./Message";
 import Spinner from "./Spinner";
 
 type CityListProps = {
-  cities: City[];
+  cities: CityType[];
   isLoading: boolean;
 };
 

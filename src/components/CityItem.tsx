@@ -1,33 +1,27 @@
-import { type City } from "../App";
+import { Link } from "react-router-dom";
+import { type CityType } from "../App";
+import { formatDate } from "../utils";
 import styles from "./CityItem.module.scss";
 
-function formatDate(date?: string) {
-  if (!date) {
-    return "";
-  }
-
-  return new Intl.DateTimeFormat("en", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-    weekday: "long",
-  }).format(new Date(date));
-}
-
 type CityItemProps = {
-  city: City;
+  city: CityType;
 };
 
 export default function CityItem({ city }: CityItemProps) {
-  const { cityName, emoji, date } = city;
+  const { cityName, emoji, date, id, position } = city;
 
   return (
-    <li className={styles["city-item"]}>
-      <span className={styles["emoji"]}>{emoji}</span>
-      <h3 className={styles["name"]}>{cityName}</h3>
-      <time className={styles["date"]}>({formatDate(date)})</time>
+    <li>
+      <Link
+        className={styles["city-item"]}
+        to={`${id}?lat=${position.lat}&lng=${position.lng}`}
+      >
+        <span className={styles["emoji"]}>{emoji}</span>
+        <h3 className={styles["name"]}>{cityName}</h3>
+        <time className={styles["date"]}>({formatDate(date)})</time>
 
-      <button className={styles["delete-btn"]}>&times;</button>
+        <button className={styles["delete-btn"]}>&times;</button>
+      </Link>
     </li>
   );
 }
