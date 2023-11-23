@@ -1,15 +1,12 @@
-import { type CityType } from "../App";
+import { type CityType } from "../context/CitiesContext";
+import { useCities } from "../hooks/useCities";
 import CountryItem from "./CountryItem";
 import styles from "./CountryList.module.scss";
 import Message from "./Message";
 import Spinner from "./Spinner";
 
-type CountryListProps = {
-  cities: CityType[];
-  isLoading: boolean;
-};
-
-export default function CountryList({ cities, isLoading }: CountryListProps) {
+export default function CountryList() {
+  const { cities, isLoading } = useCities();
   if (isLoading) {
     return <Spinner />;
   }

@@ -4,14 +4,13 @@ import { useState } from "react";
 import Button from "./Button";
 
 import styles from "./Form.module.scss";
-import { useNavigate } from "react-router-dom";
+import BackButton from "./BackButton";
 
 function Form() {
   const [cityName, setCityName] = useState("");
   // const [country, setCountry] = useState("");
   const [date, setDate] = useState(new Date());
   const [notes, setNotes] = useState("");
-  const navigate = useNavigate();
 
   return (
     <form className={styles.form}>
@@ -51,9 +50,7 @@ function Form() {
         >
           Add
         </Button>
-        <Button onClick={() => navigate(-1)} styleClass={"back"} type="button">
-          &larr; Back
-        </Button>
+        <BackButton />
       </div>
     </form>
   );
