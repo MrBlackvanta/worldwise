@@ -3,7 +3,7 @@ import styles from "./Button.module.scss";
 
 type ButtonProps = {
   children: ReactNode;
-  onClick: (event?: React.MouseEvent<HTMLButtonElement>) => void;
+  onClick?: (event?: React.MouseEvent<HTMLButtonElement>) => void;
   styleClass: string;
   type?: "button" | "submit";
 };
