@@ -1,4 +1,4 @@
-import { useCities } from "../hooks/useCities";
+import { useCities } from "../hooks/useCities.ts";
 import CityItem from "./CityItem";
 import styles from "./CityList.module.scss";
 import Message from "./Message";

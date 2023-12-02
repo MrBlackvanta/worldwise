@@ -25,16 +25,16 @@
       "id": 17806751
     },
     {
-      "cityName": "Berlin",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
+      "cityName": "Sant Julia de Loria",
+      "country": "Andorra",
+      "emoji": "🇦🇩",
+      "date": "2023-12-02T11:49:00.583Z",
+      "notes": "",
       "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
+        "lat": "42.45813300614783",
+        "lng": "1.5131918828436544"
       },
-      "id": 98443197
+      "id": 73930386
     }
   ]
 }

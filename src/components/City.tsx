@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useCities } from "../hooks/useCities";
+import { useCities } from "../hooks/useCities.ts";
 import { useEffect } from "react";
 import { formatDate } from "../utils";
 import styles from "./City.module.scss";

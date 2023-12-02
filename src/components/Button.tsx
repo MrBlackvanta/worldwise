@@ -5,7 +5,7 @@ type ButtonProps = {
   children: ReactNode;
   onClick: (event?: React.MouseEvent<HTMLButtonElement>) => void;
   styleClass: string;
-  type: "button" | "submit";
+  type?: "button" | "submit";
 };
 
 export default function Button({

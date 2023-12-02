@@ -1,5 +1,5 @@
 import { type CityType } from "../context/CitiesContext";
-import { useCities } from "../hooks/useCities";
+import { useCities } from "../hooks/useCities.ts";
 import CountryItem from "./CountryItem";
 import styles from "./CountryList.module.scss";
 import Message from "./Message";
